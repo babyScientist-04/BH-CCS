@@ -1,0 +1,40 @@
+import type { Trip } from './types'
+
+export const ongoingTrips: Trip[] = [
+  {
+    id: 'trip-01',
+    code: '#BK2345678',
+    category: 'Intra City',
+    passengers: 4,
+    pickupTime: '09:00 AM',
+    dropoffTime: '12:00 PM',
+    pickupLocation: 'Boundary Rd, Accra, Ghana',
+    dropoffLocation: 'Kotoka International Air.',
+    duration: '3h 00 min',
+    planType: 'Premium',
+  },
+  {
+    id: 'trip-02',
+    code: '#BK2345679',
+    category: 'Intra City',
+    passengers: 4,
+    pickupTime: '09:00 AM',
+    dropoffTime: '12:00 PM',
+    pickupLocation: 'Boundary Rd, Accra, Ghana',
+    dropoffLocation: 'Kotoka International Air.',
+    duration: '3h 00 min',
+    planType: 'Premium',
+  },
+  {
+    id: 'trip-03',
+    code: '#BK2345680',
+    category: 'Intra City',
+    passengers: 4,
+    pickupTime: '09:00 AM',
+    dropoffTime: '12:00 PM',
+    pickupLocation: 'Boundary Rd, Accra, Ghana',
+    dropoffLocation: 'Kotoka International Air.',
+    duration: '3h 00 min',
+    planType: 'Premium',
+  },
+]
