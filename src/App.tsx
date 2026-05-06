@@ -1,10 +1,17 @@
-import React from 'react'
+import { useState } from 'react'
 import StatCard from './myComponents/statCard'
 import { CarFront, Users} from 'lucide-react'
 import TrackingCard from './myComponents/trackingCard'
-
+import DetailView from './components/features/DetailView'
+import { ongoingTrips } from './components/features/mockTrips'
+import type { DashboardTab } from './components/features/types'
+import WalletFundingModal from './myComponents/modals/walletFundingModal'
 
 const App = () => {
+  const [activeTab, setActiveTab] = useState<DashboardTab>('Map')
+  const [walletModalOpen, setWalletModalOpen] = useState(true)
+  const selectedTrip = ongoingTrips[0]
+
   return (
     <div className='p-4'>
       <StatCard title='ongoing trips' value='13' icon={CarFront } />
@@ -29,7 +36,21 @@ const App = () => {
           city: "International Air."
         }}
       />
+
+      <DetailView
+        activeTab={activeTab}
+        onTabChange={setActiveTab}
+        selectedTrip={selectedTrip}
+      />
+      <WalletFundingModal
+        isOpen={walletModalOpen}
+        onClose={() => setWalletModalOpen(false)}
+        onProceed={() => setWalletModalOpen(false)}
+        walletName="Blackhorse wallet"
+      />
+      
     </div>
+    
   )
 }
 

@@ -28,7 +28,7 @@ const contentByTab: Record<DashboardTab, (trip: Trip) => string> = {
 
 const DetailView = ({ activeTab, onTabChange, selectedTrip }: DetailViewProps) => {
   return (
-    <section className="min-w-0">
+    <section className="max-w-180">
       <div className="mb-4 flex flex-wrap items-end gap-8 border-b border-[#E5E7EB]">
         {tabs.map((tab) => (
           <Button
